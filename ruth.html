@@ -65,6 +65,8 @@
     .letter {
       display: none;
       width: min(92vw, 720px);
+      max-height: min(82vh, 760px);
+      overflow-y: auto;
       border: 1px solid var(--green-dim);
       border-radius: 20px;
       background: rgba(4, 16, 8, 0.64);
@@ -72,10 +74,10 @@
       box-shadow: 0 0 40px rgba(0,0,0,.45);
       line-height: 1.8;
       font-size: clamp(1rem, 0.96rem + .2vw, 1.12rem);
-      white-space: pre-wrap;
+      white-space: normal;
     }
     .letter.glow { animation: letterGlow 1.1s ease-out; }
-    .date { margin-bottom: 28px; color: var(--green-soft); letter-spacing: .08em; }
+    .date { margin-bottom: 18px; color: var(--green-soft); letter-spacing: .08em; }
     .hidden { display: none; }
     .audio-note { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); color: var(--green-soft); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; opacity: .8; }
     @keyframes shake {
@@ -121,7 +123,7 @@
 
   <section class="letter hidden" id="letter">
     <div class="date">04/18/26</div>
-    <div>
+    <div style="white-space: normal;">
       Dearest Ruth,<br><br>
       Happy, happy, happy birthday! I am so grateful to be with you both on mine and now on your birthday. We stuck the landing timing-wise.<br><br>
       So, let's take a look back. We reconnected 2 months, 1 day ago. I asked you to teach me to dance. And, we are dancing tonight. But, we also danced at Inness. And in your kitchen, sitting on your couch, in the forest, in the cherry blossoms, at the cafe and in my home (several dances).<br><br>
